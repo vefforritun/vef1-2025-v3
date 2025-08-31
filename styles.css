@@ -1,0 +1,162 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/** Letur og stærðir **/
+
+/**
+ * Grunnstærð er 16px svo 1rem = 16 px.
+ * Notum í framhaldi heil og hálf margfeldi af þessu, t.d. 1.5rem til að fá „eitt og hálft bilt“
+ */
+html {
+  font-size: 16px;
+}
+
+/* Leturgerðir sem við sækjum úr fonts/ möppu */
+@font-face {
+  /* TODO */
+}
+
+/*** Allt meginmál notar Gelasio ***/
+html,
+input,
+select,
+button {
+  font-family: "Gelasio", "Georgia", serif;
+}
+
+/*** Allar fyrirsagnir nota Atkinson Hyperlegible regular ***/
+h1,
+h2,
+h3,
+legend {
+  /* TODO */
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/** Stærð á letri erfist frá foreldri í form element **/
+input,
+button,
+select {
+  font-size: inherit;
+}
+
+/**
+ * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+ * Við förum yfir flexbox í viku 4 + verkefni 4 en þangað til er hægt að nota þetta
+ * sem grunn og án breytinga.
+ * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+ * innan <body> sem á að fylgja þessu (<nav> ætti að vera undanskilið).
+ */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  /* pláss fyrir nav, það er nákvæmlega svona hátt */
+  margin-top: 4rem;
+  width: 100%;
+
+  /* Án þessa getum við lent í að síður með minna af efni séu ekki með bil fyrir neðan fót */
+  min-height: 100vh;
+
+  background-color: #ffffff;
+}
+
+/* Allt auka pláss fer í main, ekki haus eða fót */
+.wrapper main {
+  flex: 1;
+}
+
+/**
+ * Nav er fast efst og fylgir þegar við skrollum síðu.
+ */
+nav {
+  /* TODO */
+}
+
+nav ul {
+  /* TODO */
+}
+
+/* TODO fleiri selectorar fyrir valmynd */
+
+/** Haus á síðum **/
+
+header {
+  /* TODO */
+}
+
+/* TODO fleiri selectorar fyrir hausa */
+
+/** Meginmál og efni forsíðu **/
+
+main {
+  /* TODO */
+}
+
+/** Forsíða inngangsmynd **/
+
+.intro {
+  /* TODO */
+}
+
+/* TODO fleiri selectorar fyrir forsíðu inngangsmyndar */
+
+/**
+ * Cards á forsíðu.
+ */
+
+.card {
+  /* TODO */
+}
+
+/* TODO fleiri selectorar fyrir cards */
+
+/** Efnissíða **/
+
+/* TODO */
+
+/** Töflur **/
+
+/* TODO */
+
+/** Form **/
+
+/* TODO */
+
+/** Fótur **/
+
+/* TODO */
